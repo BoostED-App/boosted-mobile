@@ -1,12 +1,13 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import { fontSizes } from '../style';
+import { fontSizes } from '../style/index';
 
 export default function Header({
     type="h1",
-    colors="black",
+    color="black",
     fontWeight="700",
+    margin=0,
     centered,
     ...props
 }) {
@@ -15,7 +16,7 @@ export default function Header({
     const fontSizeStyle = {fontSize: fontSizes[type]};
 
     return (
-        <Text style={[fontSizeStyle, centeredStyle, props.style, {color, fontWeight}]}>
+        <Text style={[fontSizeStyle, centeredStyle, props.style, {color, fontWeight, margin}]}>
             {props.children}
         </Text>
     )

@@ -3,7 +3,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import CalendarRoot from '../screens/Home/Calendar/Root';
+import { colors, fontSizes } from '../style';
+import CalendarNavigator from './CalendarNavigator';
 import ScheduleRoot from '../screens/Home/Schedule/Root';
 import ClubRoot from '../screens/Home/Clubs/Root';
 import ExploreRoot from '../screens/Home/Explore/Root';
@@ -13,18 +14,26 @@ const Tab = createBottomTabNavigator();
 
 export default function RootTabs() {
 
-    const { colors } = useTheme();
 
     return (
         <Tab.Navigator
             initialRouteName="Explore"
             screenOptions={{
-                title: null,
                 tabBarShowLabel: false,
                 tabBarActiveTintColor: colors.accent,
                 headerStyle: { 
                     shadowColor: 'transparent',
-                    backgroundColor: colors.primary500
+                    backgroundColor: colors.primary500,
+                },
+                headerTitleAlign: 'left',
+                headerTitleStyle: {
+                    fontSize: fontSizes.h3,
+                    fontWeight: '700',
+                    padding: 15,
+                    color: colors.white
+                },
+                headerTitleContainerStyle: {
+                    paddingBottom: 20,
                 },
                 tabBarStyle: {
                     backgroundColor: colors.primary500
@@ -40,7 +49,7 @@ export default function RootTabs() {
             />
             <Tab.Screen
                 name="Calendar"
-                component={CalendarRoot}
+                component={CalendarNavigator}
                 options={{
                     tabBarIcon: ({ color }) => <Ionicons name="ios-calendar-sharp" size={26} color={color} />
                 }}
