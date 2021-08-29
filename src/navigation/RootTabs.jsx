@@ -21,22 +21,20 @@ export default function RootTabs() {
             screenOptions={{
                 tabBarShowLabel: false,
                 tabBarActiveTintColor: colors.accent,
+                headerStatusBarHeight: 65,
+                headerTitleAlign: 'left',
                 headerStyle: { 
                     shadowColor: 'transparent',
                     backgroundColor: colors.primary500,
                 },
-                headerTitleAlign: 'left',
                 headerTitleStyle: {
-                    fontSize: fontSizes.h3,
+                    fontSize: fontSizes.h2,
                     fontWeight: '700',
-                    padding: 15,
-                    color: colors.white
-                },
-                headerTitleContainerStyle: {
-                    paddingBottom: 20,
+                    paddingLeft: 10,
+                    color: colors.white,
                 },
                 tabBarStyle: {
-                    backgroundColor: colors.primary500
+                    backgroundColor: colors.primary500,
                 }
             }}
         >

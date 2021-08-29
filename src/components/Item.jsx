@@ -2,9 +2,9 @@ import React from "react";
 import { ListItem, Avatar } from "react-native-elements";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
-import { colors } from "../style/index";
-import ColorBadge from "./ColorBadge";
 import Header from "./Header";
+import ColorBadge from "./ColorBadge";
+import { colors } from "../style/index";
 
 export default function Item({ children, onPress }) {
     const title = React.Children.map(children, (child) =>
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     container: {
         width: "90%",
         padding: 5,
-        marginVertical: 8,
+        marginVertical: 10,
         borderWidth: 1,
         borderRadius: 5,
         borderColor: colors.primary300,

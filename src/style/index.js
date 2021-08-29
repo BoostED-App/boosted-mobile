@@ -40,3 +40,7 @@ export const darkTheme = {
         border: 'transparent'
     }
 }
+
+export const screenContainer = {
+    marginTop: 25
+}
