@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+
 import { colors } from '../style';
 
 
@@ -10,9 +11,11 @@ import { colors } from '../style';
  * @param props.color - Color of the bottom view
  * @param props.children - Rendered inside of bottom view
  */
-export default function BottomView({height, color, children}) {
+export default function BottomView({height, color, centered, children}) {
 
-    const contentStyle = [styles.contentContainer, {height, backgroundColor: color}];
+    const centeredStyle = centered ? { alignItems: 'center' } : null;
+
+    const contentStyle = [ { height, backgroundColor: color }, centeredStyle, styles.contentContainer ];
 
     return (
         <View style={styles.flexContainer}>

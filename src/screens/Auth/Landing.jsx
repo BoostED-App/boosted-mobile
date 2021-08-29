@@ -1,12 +1,19 @@
 import React from 'react';
-import {Button, View} from 'react-native'
+
 import BottomView from '../../components/BottomView';
+import Button from '../../components/Button';
+import Header from '../../components/Header';
 
 export default function Landing({navigation}) {
     return (
         <>
-            <BottomView height={300}>
-                <Button onPress={() => navigation.navigate('StudentRoot')} title="Click to navigate home"/>
+            <BottomView centered height={400}>
+                <Header type="h3" centered margin={20}>
+                    Which Describes You?
+                </Header>
+                <Button>
+                    Student
+                </Button>
             </BottomView>
         </>
     )
