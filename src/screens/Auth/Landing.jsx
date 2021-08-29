@@ -3,6 +3,7 @@ import React from 'react';
 import BottomView from '../../components/BottomView';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
+import { colors } from '../../style';
 
 export default function Landing({navigation}) {
     return (
@@ -11,7 +12,7 @@ export default function Landing({navigation}) {
                 <Header type="h3" centered margin={20}>
                     Which Describes You?
                 </Header>
-                <Button>
+                <Button rounded size="large" color={colors.landing.primary}>
                     Student
                 </Button>
             </BottomView>

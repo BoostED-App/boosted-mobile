@@ -13,22 +13,27 @@ import { colors } from "../style/index";
  * @param props.onPress - When button is pressed
  * @param props.children - Rendered Text
  * @param props.rounded - Round the button
+ * @param props.color - Color of button
  * @param props.mv - Vertical Margin
  */
 export default function Button({
   gradient = false,
   size = "small",
-  onPress,
   children,
+  onPress,
   rounded,
+  color,
   mv,
   ...props
 }) {
+
   const sizeStyle = size === "small" ? { padding: 20 } : { padding: 30 };
 
   const roundedStyle = rounded ? { borderRadius: 50 } : { borderRadius: 5 };
 
-  const buttonStyle = [styles.container, props.style, sizeStyle, roundedStyle, {marginVertical: mv}];
+  const colorStyle = color ? { backgroundColor: color } : { backgroundColor: colors.accent };
+
+  const buttonStyle = [ styles.container, props.style, sizeStyle, roundedStyle, colorStyle, {marginVertical: mv} ];
 
   return (
     <TouchableOpacity
@@ -45,10 +50,9 @@ export default function Button({
 const styles = StyleSheet.create({
   container: {
     width: "90%",
-    backgroundColor: colors.accent,
-    shadowColor: colors.accent,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 10,
+    // shadowColor: colors.accent,
+    // shadowOffset: { width: 0, height: 2 },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 10,
   },
 });

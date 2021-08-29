@@ -9,6 +9,7 @@ import { colors } from '../style';
  * @param props
  * @param props.height - Height of the bottom view
  * @param props.color - Color of the bottom view
+ * @param props.centered - If true, the bottom view will be centered
  * @param props.children - Rendered inside of bottom view
  */
 export default function BottomView({height, color, centered, children}) {
