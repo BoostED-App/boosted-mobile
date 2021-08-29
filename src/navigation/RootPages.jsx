@@ -30,27 +30,79 @@ export default function RootPages() {
                 headerBackVisible: true
             }}
         >
-            <Stack.Screen name='Landing' component={Landing}/>
+            <Stack.Screen 
+                name='Landing' 
+                component={Landing}
+            />
 
-            <Stack.Screen name='StudentLanding' component={StudentLanding}/>
-            <Stack.Screen name='StudentLogin' component={StudentLogin}/>
-            <Stack.Screen name='StudentRegister' component={StudentRegister}/>
 
-            <Stack.Screen name='AdminLanding' component={AdminLanding}/>
-            <Stack.Screen name='AdminLogin' component={AdminLogin}/>
-            <Stack.Screen name='AdminRegister' component={AdminRegister}/>
+            <Stack.Screen 
+                name='StudentLanding' 
+                component={StudentLanding}
+            />
+            <Stack.Screen 
+                name='StudentLogin' 
+                component={StudentLogin}
+            />
+            <Stack.Screen 
+                name='StudentRegister' 
+                component={StudentRegister}
+            />
 
-            <Stack.Screen name='SchoolLanding' component={SchoolLanding}/>
-            <Stack.Screen name='SchoolPurchase' component={SchoolPurchase}/>
-            <Stack.Screen name='SchoolActivation' component={SchoolActivation}/>
-            <Stack.Screen name='SchoolActivation-Theme' component={SchoolActivationTheme}/>
-            <Stack.Screen name='SchoolActivation-Code' component={SchoolActivationCode}/>
-            <Stack.Screen name='SchoolActivation-Security' component={SchoolActivationSecurity}/>
-            <Stack.Screen name='SchoolActivation-Features' component={SchoolActivationFeatures}/>
+            <Stack.Screen 
+                name='AdminLanding' 
+                component={AdminLanding}
+            />
+            <Stack.Screen 
+                name='AdminLogin' 
+                component={AdminLogin}
+            />
+            <Stack.Screen 
+                name='AdminRegister' 
+                component={AdminRegister}
+            />
 
-            <Stack.Screen name='StudentRoot' component={RootTabs}/>
 
-            <Stack.Screen name='AdminRoot' component={RootTabs}/>
+            <Stack.Screen 
+                name='SchoolLanding' 
+                component={SchoolLanding}
+            />
+            <Stack.Screen 
+                name='SchoolPurchase' 
+                component={SchoolPurchase}
+            />
+            <Stack.Screen 
+                name='SchoolActivation' 
+                component={SchoolActivation}
+            />
+            <Stack.Screen 
+                name='SchoolActivation-Theme' 
+                component={SchoolActivationTheme}
+            />
+            <Stack.Screen 
+                name='SchoolActivation-Code' 
+                component={SchoolActivationCode}
+            />
+            <Stack.Screen 
+                name='SchoolActivation-Security' 
+                component={SchoolActivationSecurity}
+            />
+            <Stack.Screen 
+                name='SchoolActivation-Features' 
+                component={SchoolActivationFeatures}
+            />
+
+
+            <Stack.Screen 
+                name='StudentRoot' 
+                component={RootTabs}
+            />
+            
+
+            <Stack.Screen 
+                name='AdminRoot' 
+                component={RootTabs}
+            />
         </Stack.Navigator>
     )
 }
