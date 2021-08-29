@@ -12,6 +12,13 @@ export const colors = {
     accentHover: '#575cf2',
     accentDisabled: '#9da0f5',
     accentTransparent: 'rgba(82,0,255,.50)',
+    
+    landing: {
+        primary: '#080D29',
+        accent100: '#ffffff',
+        accent200: '#F6F6F6',
+        accent300: '#ECECEC'
+    }
 }
 
 export const fontSizes = {
