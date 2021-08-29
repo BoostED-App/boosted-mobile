@@ -14,7 +14,7 @@ export const colors = {
     accentTransparent: 'rgba(82,0,255,.50)',
     
     landing: {
-        primary: '#080D29',
+        primary: '#000418',
         accent100: '#ffffff',
         accent200: '#F6F6F6',
         accent300: '#ECECEC'
