@@ -6,6 +6,13 @@ import Header from "./Header";
 import ColorBadge from "./ColorBadge";
 import { colors } from "../style/index";
 
+
+/**
+ * Renders an <Item /> Component
+ * @param props
+ * @param props.children - Title, Subtitle, Avatar
+ * @param props.onPress - When the Item is pressed
+ */
 export default function Item({ children, onPress }) {
     const title = React.Children.map(children, (child) =>
         child.type.displayName === "Item.Title" ? child : null
@@ -39,6 +46,14 @@ export default function Item({ children, onPress }) {
     );
 }
 
+
+/**
+ * Renders an <Item.Title /> Component
+ * @param props
+ * @param props.children - Text for Title
+ * @param props.badge - Whether a <ColorBadge /> is rendered
+ * @param props.badgeOptions - Color and Padding option for <ColorBadge />
+ */
 function ItemTitle({ children, badge, badgeOptions }) {
     return (
         <>
@@ -59,6 +74,12 @@ function ItemTitle({ children, badge, badgeOptions }) {
     );
 }
 
+
+/**
+ * Renders an <Item.Subtitle /> Component
+ * @param props
+ * @param props.children - Text for subtitle
+ */
 function ItemSubtitle({ children }) {
     return (
         <>
@@ -69,6 +90,12 @@ function ItemSubtitle({ children }) {
     );
 }
 
+
+/**
+ * Renders an <Item.Avatar /> Component
+ * @param props
+ * @param props.iconName - Icon name for avatar
+ */
 function ItemAvatar({ iconName }) {
     return (
         <>

@@ -11,6 +11,7 @@ export default function ScheduleRoot() {
             <ScrollView>
                 <View style={[{flex: 1, alignItems: 'center'}, screenContainer]}>
                     <Button>Request Schedule Change</Button>
+                    <Button mv={15}>Share Schedule</Button>
                         <Item>
                             <Item.Title badge badgeOptions={{color: 'blue'}}>
                                 Algebra II
