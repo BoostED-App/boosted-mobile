@@ -27,7 +27,7 @@ export default function Button({
   ...props
 }) {
 
-  const sizeStyle = size === "small" ? { padding: 20 } : { padding: 30 };
+  const sizeStyle = size === "small" ? { padding: 20 } : { padding: 25 };
 
   const roundedStyle = rounded ? { borderRadius: 50 } : { borderRadius: 5 };
 

@@ -16,7 +16,9 @@ export default function BottomView({height, color, centered, children}) {
 
     const centeredStyle = centered ? { alignItems: 'center' } : null;
 
-    const contentStyle = [ { height, backgroundColor: color }, centeredStyle, styles.contentContainer ];
+    const colorStyle = color ? { backgroundColor: color } : { backgroundColor: colors.landing.accent100 };
+
+    const contentStyle = [ { height }, centeredStyle, styles.contentContainer, colorStyle ];
 
     return (
         <View style={styles.flexContainer}>
@@ -34,7 +36,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.landing.primary
     },
     contentContainer: {
-        backgroundColor: colors.landing.accent100,
         borderTopRightRadius: 15,
         borderTopLeftRadius: 15,
         paddingTop: 10
